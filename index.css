@@ -1,0 +1,87 @@
+* {
+    margin: 0.25% 0.25% ;
+    font-family: Verdana, sans-serif;
+      
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.card {
+    width: 200px;
+    height: 310px;
+    margin: 1%;
+    border-radius: 0.4%;
+    border: 1px solid rgba(81, 79, 79, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.info {
+    font-size: 90%;
+    color: rgb(95, 95, 95);
+    padding: 5% 5%;
+}
+
+.info-new {
+    display: none;
+    font-size: 85%;
+    color: rgb(39, 39, 39);
+    padding: 1% 5%;
+}
+
+.name-cats {       
+    color: rgb(55, 55, 55);
+    font-size: 18px;
+    padding: 5% 3%; 
+}
+
+.img-list {
+    width: 5%;
+}
+
+#rotateBtn {
+    width: 25px;
+    height: 25px;
+    background-image: url('https://static.tildacdn.com/tild3530-3639-4331-b037-646133343837/img_144719.png');
+    background-color: white;
+    background-size: cover;
+    border: 0;
+    transition: transform 0.3s ease;
+}
+
+#rotateBtn:focus {
+    transform: rotate(90deg);
+}
+
+#rotateBtn:focus ~ .grid {
+    display: grid;
+}
+
+#rotateBtn:focus + .grid .card .info-new {
+    display: block;
+}
+
+#rotateBtn:focus + .grid .card .info {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
